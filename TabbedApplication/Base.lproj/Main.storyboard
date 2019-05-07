@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HMR-AA-Q54">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Your Transactions-->
+        <scene sceneID="hPN-J5-Omc">
+            <objects>
+                <tableViewController id="S8V-GQ-QbP" customClass="TransactionTableViewController" customModule="TabbedApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ych-kB-mVv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionCell" rowHeight="120" id="x9P-3A-2lm" customClass="CustomTransactionTableViewCell" customModule="TabbedApplication" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x9P-3A-2lm" id="N0m-nm-5vY">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="144" translatesAutoresizingMaskIntoConstraints="NO" id="BeD-uc-48p">
+                                            <rect key="frame" x="8" y="8" width="398" height="103.5"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="b9c-nJ-Qfk">
+                                                    <rect key="frame" x="0.0" y="23.5" width="188" height="57"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yil-Kd-xon">
+                                                            <rect key="frame" x="0.0" y="0.0" width="137" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fja-ev-Ojo">
+                                                            <rect key="frame" x="0.0" y="36.5" width="36" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xqm-wE-U4e">
+                                                    <rect key="frame" x="332" y="41.5" width="66" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$400.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfS-1T-hEO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="66" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="BeD-uc-48p" secondAttribute="trailing" constant="8" id="8hF-MH-Lsl"/>
+                                        <constraint firstItem="BeD-uc-48p" firstAttribute="top" secondItem="N0m-nm-5vY" secondAttribute="top" constant="8" id="Kk8-Mj-EcN"/>
+                                        <constraint firstItem="BeD-uc-48p" firstAttribute="leading" secondItem="N0m-nm-5vY" secondAttribute="leading" constant="8" id="OUG-oZ-14i"/>
+                                        <constraint firstAttribute="bottom" secondItem="BeD-uc-48p" secondAttribute="bottom" constant="8" id="eYq-4Q-hVZ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="transactionDateLabel" destination="Fja-ev-Ojo" id="9S7-1Y-eTC"/>
+                                    <outlet property="transactionPriceLabel" destination="nfS-1T-hEO" id="2vj-bF-QR3"/>
+                                    <outlet property="transactionTitleLabel" destination="yil-Kd-xon" id="2By-E8-WMd"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="S8V-GQ-QbP" id="nJb-kV-7jk"/>
+                            <outlet property="delegate" destination="S8V-GQ-QbP" id="DwI-eH-vBD"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Transactions" id="0rE-UO-GUr"/>
+                    <navigationItem key="navigationItem" title="Your Transactions" id="HC2-Lc-gFu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Og-8O-E17" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3789.8550724637685" y="121.875"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="o0p-1t-sQX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HMR-AA-Q54" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="lqY-iH-Uba"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PxZ-9c-Uhv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZZD-Ef-oAd" kind="relationship" relationship="rootViewController" id="GzB-H7-I6u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jxs-Iv-i8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1969.5652173913045" y="121.875"/>
+        </scene>
+        <!--Your Transactions-->
+        <scene sceneID="Mpe-HL-9LS">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ZZD-Ef-oAd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Your Transactions" id="nI7-tk-ntI"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8gR-zG-Ydk">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="S8V-GQ-QbP" kind="relationship" relationship="viewControllers" id="2O1-X5-cxH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U8n-f4-Apq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2879.7101449275365" y="121.875"/>
+        </scene>
+    </scenes>
+</document>
